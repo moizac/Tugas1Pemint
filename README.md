@@ -9,3 +9,4 @@ Langkah-langkah
 6. Menghubungkan github repo dengan komputer melalui remote dengan cara git remote add origin https://github.com/moizac/TugasPemint.git"
 7. Mempush dengan cara "git push -u origin master"
 8. Terimakasih
+9. Selesai
