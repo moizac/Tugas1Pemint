@@ -2,10 +2,10 @@
 
 Langkah-langkah
 1. Buat respository baru pada github
-2. Buat direktori pada komputer dan tambahkan file README.md
-3. Memanage program oleh git dengan cara melakukan git init di direktori
-4. Menambahkan README.md agar dimanajemen oleh git
-5. Membuat commit dengan cara commit -m "first commit"
+2. Buat direktori pada komputer dan inisiasi ginit pada direktori yang dipilih
+3. 
+4. Memberitahu komputer bahwa direktori tsb akan dimanage oleh git program
+5. Membuat commit dengan cara commit -m "First commit" dan selanjutnya menyesuaikan apa yang dilakukan
 6. Menghubungkan github repo dengan komputer melalui remote dengan cara git remote add origin https://github.com/moizac/TugasPemint.git"
 7. Mempush dengan cara "git push -u origin master"
 8. Terimakasih
