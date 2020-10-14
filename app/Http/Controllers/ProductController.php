@@ -49,19 +49,25 @@ class ProductController extends Controller
                 ], 401);
             }
     }
-    public function destroy($id)
+    public function update(Request $request, $id)
     {
-        $products = Product::find($id);
-        if($products){
-            $products->delete();
-            return response()->json([
-                'message' => 'Produk Berhasil Dihapus',
-                'data' => $products
-            ], 200);
-        }else{
-            return response()->json([
-                'message' => 'Produk Tidak Ada'
-            ], 404);
-        }
+        $product = Product::whereid($id)->update([
+            'name' => $request->name,
+            'price' => $request->price,
+            'rating' => $request->rating,
+            'quantity' => $request->quantity
+            ]);
+            if($product){
+                return response()->json([
+                    'message' => 'Produk Berhasil Diupdate',
+                    'data' => $id
+                ], 200);
+            }else {
+                return response()->json([
+                    'message' => 'Produk Gagal Diupdate',
+                    'data' => $products
+                ], 401);
+            }
     }
+
 }
