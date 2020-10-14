@@ -9,13 +9,19 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
-        return $products;
+        return response()->json([
+            'message' => 'Menampilkan Semua Produk',
+            'data' => $products
+        ], 200);
     }
     public function show($id)
     {
         $products = Product::find($id);
         if($products){
-            return $products;
+            return response()->json([
+                'message' => 'Produk Berhasil Ditemukan',
+                'data' => $products
+            ], 200);
         }else{
             return response()->json([
                 'message' => 'Produk Tidak Ada'
